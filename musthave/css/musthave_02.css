@@ -1,0 +1,218 @@
+/*
+  Class:    4A7B
+  Name:     L. Heijde
+  Purpose:  Responsive grid view MUSTHAVE SHOP 02
+
+  dd-mm-yyyy  Description
+  ----------  ------------------------------------------
+  03-05-2018  Initial
+  04-05-2018  Mobile First means designing for mobile before designing for desktop 
+			  or any other device (This will make the page display faster on smaller devices).
+  08-05-2018  Add grid view (12 columns) and left padding column company
+  14-05-2018  Add root for the colors
+*/ 
+
+/*************************
+ * Global values         *
+ *************************/
+:root {
+	--MUSTHAVE_BLUE: #355A9C;
+	--MUSTHAVE_WHITE: white;
+	--MUSTHAVE_BLACK: black;
+	--MUSTHAVE_POWDERBLUE: powderblue;
+	--MUSTHAVE_LOGO: orange;
+} 
+ 
+ 
+/**************************************************
+ * Include the padding and border to all elements * 
+ **************************************************/
+* {
+  box-sizing: border-box; 
+}
+
+/********************************
+ * Default setting mobile first *
+ ********************************/
+body { 
+  width: 100%; 
+  height: 100%;
+  margin: 0;
+  padding: 10px;
+  font-size: 100%;
+  font-family: 'Calibri', 'Arial', 'Helvetica'; 
+  color: var(--MUSTHAVE_BLACK);
+}
+
+section {
+  padding: 10px;
+  background-color: var(--MUSTHAVE_POWDERBLUE);
+}
+
+article {
+  margin: 5px;
+  padding: 10px;
+  background-color: var(--MUSTHAVE_WHITE);
+}	
+
+h2 {
+  margin: 0px;
+  padding: 0px;
+  color: var(--MUSTHAVE_BLUE);
+}
+
+footer {
+  font-size: 0.80em;
+}
+
+/*************************
+ * Class                 *
+ *************************/
+.logo_text {
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 0.77em;
+  color: var(--MUSTHAVE_LOGO);
+}
+
+.logo_image {
+  width: 260px;
+}	
+
+.newrow::after { /*start new row*//*clearfix*/
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.column_article { 
+  float: left;
+  padding: 15px;
+  border: 1px solid black;
+}
+
+.column_company {
+  float: left;
+  background-color: var(--MUSTHAVE_WHITE);
+}
+
+.article_img {
+	padding: 10px;
+	width: 100%;
+}
+
+.article_price,
+.article_description {
+	font-size: 1.0em;
+	margin: 0px;
+	padding: 0px;
+	border: none;
+	margin-left: 5px;
+}
+
+.article_description {
+	color: var(--MUSTHAVE_BLUE);
+}
+
+.article_amount {
+	float: right;
+}
+
+.article_col01 {
+	width: 25%;
+	float: left;
+}
+
+.article_col02 {
+	width: 70%;
+	float: left;
+	margin-left: 10px;
+}
+
+.musthave_button {
+	width: 100px;
+	font-size: 1.10em;
+	border: 1px solid black;
+	color: white;
+    background-color: var(--MUSTHAVE_BLUE)	
+}
+
+.musthave_button:hover {
+	background-color: var(--MUSTHAVE_LOGO);
+	color: black;
+}
+
+
+/*************************
+ * Media queries         *
+ *************************/
+@media only screen and (max-width: 340px)  { 
+
+  /*extra small device, width 0-340*/
+  /*default settings see above*/
+}
+
+@media only screen and (min-width: 340px) and (max-width: 768px) {
+	
+  /*small device, width 340-768*/
+  /*overwrite*/
+  .logo_text {
+    font-size: 0.97em;
+  }
+  
+  .logo_image {
+    width: 320px;
+  }
+  
+  .article_price,
+  .article_description {
+	font-size: 1.2em;
+  }
+  
+}
+
+@media only screen and (min-width: 768px) {
+
+  /*medium device and larger, width 768 and up*/
+  /*overwrite*/
+	
+  /*use a grid view*/
+  .col_01 {width: 8.33%;}
+  .col_02 {width: 16.66%;}
+  .col_03 {width: 25%;}
+  .col_04 {width: 33.33%;}
+  .col_05 {width: 41.66%;}
+  .col_06 {width: 50%;}
+  .col_07 {width: 58.33%;}
+  .col_08 {width: 66.66%;}
+  .col_09 {width: 75%;}
+  .col_10 {width: 83.33%;}
+  .col_11 {width: 91.66%;}
+  .col_12 {width: 100%;}
+
+  .logo_text {
+    font-size: 1.20em;
+  }
+  
+  .logo_image {
+    width: 400px;
+  }
+  
+  .column_company {
+    padding-left: 25px;
+  }
+  
+  .article_price,
+  .article_description {
+	font-size: 1.6em;
+  }
+  
+  
+  
+  
+  
+ 
+}
+
+
+

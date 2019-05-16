@@ -1,0 +1,138 @@
+/*
+  Class:    4A7B
+  Name:     Lisa-Marie van der Heijde
+  Purpose:  Template layout webpagina 
+  
+  mm-dd-yyy    Description
+  ---------    -------------------------------------------------
+  10-24-2017   Initial
+*/
+
+/************************************************
+* Include the padding and border to all elements*
+*************************************************/
+* {
+  box-sizing: border-box;
+}
+/************************
+* Default setting       *
+*************************/
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0px;
+  font-size: 100%;
+  font-family: 'calibri', 'arial', 'helvetica';
+  color: black;
+}  
+ /************************
+* elements              *
+*************************/ 
+header {
+    width: 100%;
+	height: 100px;
+	text-align: center;
+	font-size: 4.0em;
+	background-color: blue;
+	color: white;
+	margin: 0px;
+	padding: 0px;
+}
+
+nav {
+	display: inline-block;
+	width: 100%;
+	height: 50px;
+	background-color: red;
+}
+
+section {
+	width: 55%;
+	background-color: green;
+}
+
+article {
+	margin: 5px;
+	padding: 10px;
+	background-color: yellow;
+}
+
+aside {
+	width: 29%;
+	margin-left: 10px;
+	background-color: purple;
+}
+
+footer {
+	width: 100%;
+	height: 35px;
+	text-align: center;
+	font-size: 1.0em;
+	background-color: orange;
+}
+
+a:link, a:visited{
+	background-color: black;
+    color: white;
+    padding: 16px;
+	font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.dropbtn {
+	background-color: black;
+	color: white;
+	padding: 16px;
+    font-size: 16px;
+	min-width: 160px;
+	border: none;
+    cursor: pointer;
+}
+
+/* same min-width in both dropbtn (dropdown button) and dropdown-content 
+   makes sure that the dropdown links are perfectly aligned with the button! */
+
+.dropdown {
+    position: relative;
+    display: inline-block;    
+}
+
+.dropdown-content {
+    position: absolute;
+    display: none;
+    min-width: 160px;   
+    z-index: 1;
+}
+
+.dropdown-content a {
+	background-color: black;
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+	background-color: grey
+	}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: grey;
+}
+
+.clearfix::after {
+	content: "";
+	clear: both;
+	display:table;
+}
+
+.column {
+	float: left;
+	padding: 15px;
+}
